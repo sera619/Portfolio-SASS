@@ -1,0 +1,49 @@
+$primaryColor: #00d9ff;
+$primarytopColor: #00d9ff;
+$secondaryColor: rgb(0, 245, 0);
+$normalTextcolor: #fff;
+$thirdColor: rgb(226, 0, 0);
+$mainBackground: #272727;
+$secondBackground: #111;
+$lightBackgroudn: #b1b2b3;
+
+@font-face{
+    font-family: 'Ethnocen';
+    src: url('../res/fonts/ETHNOCEN.TTF');
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+@mixin transition-ease{
+    transition: all 0.5s ease-in-out;
+}
+
+
+@function setTextColor($color){
+    @if (lightness($color) >40%){
+        @return #000;
+    }@else{
+        @return #fff;
+    }
+}
+
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @mixin media-lg {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+  @mixin media-xl {
+    @media screen and (min-width: 1600px) {
+      @content;
+    }
+}

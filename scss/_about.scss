@@ -1,0 +1,57 @@
+
+.about{
+    padding-bottom: 2rem;
+    &__bio-image{
+        height: 40vh;
+        width: 100%;
+        background: linear-gradient(to left,rgba($secondBackground, 0.2), rgba($secondBackground, 0.8)),
+        url('../res/img/anon_darkhead.jpg') center top;
+        background-size: cover;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        box-shadow: 0 0 1rem rgba($thirdColor, 0.3),0 0 2rem rgba($thirdColor, 0.2);
+    }
+    p{
+
+        color: $normalTextcolor;
+        margin-bottom: 2rem;
+    }
+    &__bio{
+        width:80%;
+        text-align: center;
+        
+        .text-secondary{
+            padding-bottom:1rem;
+            color: $thirdColor
+        }    
+    }
+    .jobs{
+        width: 60vw;
+        margin: 2rem auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        
+        &__job{
+            background: lighten($secondBackground, 10%);
+            padding: 2rem;
+            border-bottom: 2px solid;
+            h2,h3{
+                margin: 0.5rem 0;
+
+            }
+            h6{
+                margin:0.3rem 0;
+            }
+        }
+        .social-icons{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+    footer{
+        transform: rotate(90deg)translate(-5.2rem, -6rem);
+    }

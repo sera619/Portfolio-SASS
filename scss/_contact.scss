@@ -1,0 +1,37 @@
+.contact {
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: 
+      linear-gradient(
+        to right,
+        rgba($secondBackground, 0.01),
+        rgba($mainBackground, 0.2),),
+      url('../res/img/rose_anon.jpg') center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0 0 1rem rgba($primaryColor, 0.3), 0 0 2rem rgba($primaryColor, 0.2);
+  
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+  
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+      font-size: 1.5rem;
+    }
+  
+    .social-icons {
+      position: initial;
+      margin-top: 2rem;
+    }
+  }

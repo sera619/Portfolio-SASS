@@ -1,0 +1,102 @@
+.projects {
+    padding-bottom: 2rem;
+  
+    &__bio-image {
+      height: 30vh;
+      width: 100%;
+      background: 
+        linear-gradient(
+          to right,
+          rgba($secondBackground, 0.01),
+          rgba($mainBackground, 0.2),),
+        url('../res/img/rose_anon.jpg') center top;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      box-shadow: 0 0 1rem rgba($primaryColor, 0.3), 0 0 2rem rgba($primaryColor, 0.2);
+  
+      .text-secondary {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+  
+    &__items {
+      width: 60vw;
+      margin: 2rem auto 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+    }
+  
+    &__item {
+      position: relative;
+      border-bottom: 5px solid $primaryColor;
+      overflow: hidden;
+      cursor: pointer;
+  
+      img {
+        width: 100%;
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba($primaryColor, 0.2);
+        opacity: 0;
+        @include transition-ease;
+      }
+  
+      &:hover {
+        &::after {
+          top: 0;
+          opacity: 0.9;
+        }
+        .projects__btn {
+          opacity: 1;
+        }
+      }
+    }
+  
+    &__btns {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      text-align: center;
+    }
+  
+    &__btn {
+      opacity: 0;
+      color: $lightBackgroudn;
+      @include transition-ease;
+  
+      &:hover {
+        color: $primaryColor;
+        transform: translateY(-2px);
+        text-shadow: 0 0 5px $primaryColor;
+      }
+    }
+  
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    footer {
+      transform:
+        rotate(90deg)
+        translate(-3rem, -5rem);
+    }
+    
+  }
